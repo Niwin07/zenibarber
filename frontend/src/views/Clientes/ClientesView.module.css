@@ -1,0 +1,55 @@
+/* ClientesView.module.css */
+
+.container {
+  max-width: 600px;
+  margin: 0 auto;
+  padding: var(--space-4);
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: var(--space-4);
+}
+
+.title {
+  font-size: 28px;
+  font-weight: 700;
+  color: var(--text-primary);
+}
+
+.searchWrapper {
+  margin-bottom: var(--space-4);
+}
+
+.content {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-4);
+}
+
+.clientInfo {
+  flex: 1;
+  min-width: 0;
+}
+
+.clientName {
+  font-weight: 500;
+  color: var(--text-primary);
+}
+
+.clientPhone {
+  font-size: 13px;
+  color: var(--text-secondary);
+}
+
+@media (max-width: 600px) {
+  .container {
+    padding: var(--space-3);
+  }
+
+  .title {
+    font-size: 24px;
+  }
+}

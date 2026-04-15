@@ -1,0 +1,63 @@
+/* Badge.module.css */
+
+.badge {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--space-1);
+  font-weight: 600;
+  border-radius: var(--radius-pill);
+  white-space: nowrap;
+}
+
+/* ── Sizes ── */
+.sm {
+  padding: 3px 8px;
+  font-size: 11px;
+}
+
+.md {
+  padding: 4px 10px;
+  font-size: 12px;
+}
+
+.lg {
+  padding: 6px 14px;
+  font-size: 14px;
+}
+
+/* ── Variants ── */
+.default {
+  background: var(--bg-tertiary);
+  color: var(--text-secondary);
+}
+
+.success {
+  background: var(--color-success-bg);
+  color: var(--color-success);
+}
+
+.warning {
+  background: var(--color-warning-bg);
+  color: var(--color-warning);
+}
+
+.error {
+  background: var(--color-error-bg);
+  color: var(--color-error);
+}
+
+.info {
+  background: var(--color-info-bg);
+  color: var(--color-info);
+}
+
+.gold {
+  background: var(--color-gold-bg);
+  color: var(--color-gold-dark);
+}
+
+/* ── Icon ── */
+.icon {
+  width: 12px;
+  height: 12px;
+}

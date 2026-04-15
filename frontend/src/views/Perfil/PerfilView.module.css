@@ -1,0 +1,95 @@
+/* PerfilView.module.css */
+
+.container {
+  max-width: 600px;
+  margin: 0 auto;
+  padding: var(--space-4);
+}
+
+.profileCard {
+  background: var(--bg-secondary);
+  border-radius: var(--radius-xl);
+  padding: var(--space-6);
+  box-shadow: var(--shadow-card);
+  text-align: center;
+  margin-bottom: var(--space-6);
+}
+
+.avatar {
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  background: linear-gradient(135deg, var(--color-gold) 0%, var(--color-gold-dark) 100%);
+  color: var(--text-inverse);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 28px;
+  font-weight: 700;
+  margin: 0 auto var(--space-4);
+}
+
+.userName {
+  font-size: 22px;
+  font-weight: 700;
+  color: var(--text-primary);
+  margin-bottom: var(--space-1);
+}
+
+.userRole {
+  font-size: 14px;
+  color: var(--text-secondary);
+  text-transform: capitalize;
+}
+
+.infoCard {
+  margin-bottom: var(--space-6);
+}
+
+.infoItem {
+  display: flex;
+  justify-content: space-between;
+  padding: var(--space-4);
+  border-bottom: 0.5px solid var(--separator);
+}
+
+.infoItem:last-child {
+  border-bottom: none;
+}
+
+.infoLabel {
+  color: var(--text-secondary);
+  font-size: 14px;
+}
+
+.infoValue {
+  color: var(--text-primary);
+  font-weight: 500;
+  font-size: 14px;
+}
+
+.logoutBtn {
+  width: 100%;
+  background: var(--color-error);
+  color: var(--text-inverse);
+}
+
+@media (max-width: 600px) {
+  .container {
+    padding: var(--space-3);
+  }
+
+  .profileCard {
+    padding: var(--space-4);
+  }
+
+  .avatar {
+    width: 64px;
+    height: 64px;
+    font-size: 24px;
+  }
+
+  .userName {
+    font-size: 20px;
+  }
+}

@@ -1,0 +1,100 @@
+/* BarberoColumn.module.css */
+
+.column {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+  min-width: 120px;
+  border-left: 0.5px solid var(--separator);
+}
+
+/* ── Header ── */
+.header {
+  height: 56px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: var(--space-1);
+  padding: var(--space-2) var(--space-1);
+  border-bottom: 0.5px solid var(--separator);
+  position: sticky;
+  top: 0;
+  background: var(--bg-secondary);
+  z-index: var(--z-sticky);
+}
+
+.avatar {
+  width: var(--avatar-sm);
+  height: var(--avatar-sm);
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+.avatarFallback {
+  width: var(--avatar-sm);
+  height: var(--avatar-sm);
+  border-radius: 50%;
+  background: var(--accent);
+  color: var(--text-inverse);
+  font-size: 11px;
+  font-weight: 700;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  letter-spacing: -0.5px;
+  text-transform: uppercase;
+}
+
+.nombre {
+  font-size: 11px;
+  font-weight: 600;
+  color: var(--text-secondary);
+  text-align: center;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  max-width: 100%;
+}
+
+/* ── Grid Area ── */
+.gridArea {
+  position: relative;
+  flex: 1;
+}
+
+/* ── Slot (Dropzone) ── */
+.slot {
+  border-bottom: 0.5px solid var(--separator);
+  cursor: pointer;
+  transition: background var(--transition-fast);
+}
+
+.slot:hover {
+  background: var(--bg-tertiary);
+}
+
+.slotOver {
+  background: var(--color-info-bg);
+  border-color: var(--accent-blue);
+}
+
+.slotBusy {
+  background: repeating-linear-gradient(
+    -45deg,
+    transparent,
+    transparent 4px,
+    rgba(0, 0, 0, 0.025) 4px,
+    rgba(0, 0, 0, 0.025) 8px
+  );
+}
+
+/* ── Turno Wrapper ── */
+.turnoWrapper {
+  position: absolute;
+  left: 3px;
+  right: 3px;
+  z-index: 5;
+  border-radius: var(--radius-md);
+  overflow: hidden;
+}

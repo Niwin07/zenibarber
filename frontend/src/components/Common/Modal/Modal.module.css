@@ -1,0 +1,120 @@
+/* Modal.module.css */
+
+.backdrop {
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.4);
+  backdrop-filter: blur(4px);
+  -webkit-backdrop-filter: blur(4px);
+  z-index: var(--z-modal);
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+  animation: fadeIn 0.2s ease;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+.modal {
+  width: 100%;
+  max-height: 92dvh;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  animation: slideUp var(--spring);
+}
+
+@keyframes slideUp {
+  from {
+    transform: translateY(40px);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+/* ── Sheet (Mobile bottom sheet) ── */
+.sheet {
+  max-width: 560px;
+  border-radius: var(--radius-xl) var(--radius-xl) 0 0;
+  padding: var(--space-3) var(--space-5) 32px;
+  background: var(--bg-secondary);
+}
+
+/* ── Centered (Desktop modal) ── */
+.centered {
+  align-items: center;
+  justify-content: center;
+  padding: var(--space-4);
+}
+
+.centered .modal {
+  border-radius: var(--radius-xl);
+  padding: var(--space-6);
+  background: var(--bg-secondary);
+  box-shadow: var(--shadow-modal);
+  max-width: 480px;
+  margin: auto;
+}
+
+/* ── Handle (iOS style) ── */
+.handle {
+  width: 36px;
+  height: 4px;
+  border-radius: var(--radius-pill);
+  background: var(--separator-opaque);
+  margin: 0 auto var(--space-4);
+  flex-shrink: 0;
+}
+
+/* ── Title ── */
+.title {
+  font-size: 18px;
+  font-weight: 700;
+  color: var(--text-primary);
+  margin-bottom: var(--space-5);
+  text-align: center;
+  flex-shrink: 0;
+}
+
+/* ── Content ── */
+.content {
+  flex: 1;
+  overflow-y: auto;
+  padding-bottom: var(--space-2);
+}
+
+/* ── Footer ── */
+.footer {
+  flex-shrink: 0;
+  padding-top: var(--space-4);
+  display: flex;
+  gap: var(--space-3);
+}
+
+.footer > * {
+  flex: 1;
+}
+
+/* ── Responsive ── */
+@media (min-width: 600px) {
+  .sheet {
+    align-items: center;
+    border-radius: var(--radius-xl);
+    margin: var(--space-4);
+    max-height: calc(100dvh - 32px);
+  }
+
+  .sheet .content {
+    overflow-y: visible;
+  }
+}

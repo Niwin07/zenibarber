@@ -1,0 +1,30 @@
+/* TimeColumn.module.css */
+
+.column {
+  display: flex;
+  flex-direction: column;
+  flex-shrink: 0;
+  width: 56px;
+  background: var(--bg-secondary);
+  border-right: 0.5px solid var(--separator);
+}
+
+.headerSpacer {
+  height: 56px;
+  border-bottom: 0.5px solid var(--separator);
+  flex-shrink: 0;
+}
+
+.slot {
+  display: flex;
+  align-items: flex-start;
+  justify-content: flex-end;
+  padding: var(--space-1) var(--space-2);
+}
+
+.label {
+  font-size: 11px;
+  font-weight: 500;
+  color: var(--text-tertiary);
+  transform: translateY(-8px);
+}

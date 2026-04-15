@@ -4,7 +4,6 @@ import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
 import { Toaster } from "react-hot-toast";
 import { useAuthStore } from "./stores/auth.store";
 
-// Vistas
 import LoginView from "./views/Auth/LoginView";
 import AgendaView from "./views/Agenda/AgendaView";
 import StockView from "./views/Stock/StockView";
@@ -19,7 +18,7 @@ const qc = new QueryClient({
 });
 
 function PrivateRoute({ children }) {
-  const token = useAuthStore((s) => s.token);
+  const token = useAuthStore((s) => s.token) || localStorage.getItem("token");
   return token ? children : <Navigate to="/login" replace />;
 }
 
@@ -51,7 +50,7 @@ export default function App() {
           style: {
             background: "var(--bg-secondary)",
             color: "var(--text-primary)",
-            borderRadius: "12px",
+            borderRadius: "var(--radius-md)",
             boxShadow: "var(--shadow-lg)",
             fontFamily: "var(--font-sans)",
             fontSize: "14px",

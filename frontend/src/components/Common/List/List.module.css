@@ -1,0 +1,46 @@
+/* List.module.css */
+
+.list {
+  background: var(--bg-secondary);
+  border-radius: var(--radius-lg);
+  overflow: hidden;
+}
+
+.item {
+  display: flex;
+  align-items: center;
+  gap: var(--space-3);
+  padding: var(--space-3) var(--space-4);
+  border-bottom: 0.5px solid var(--separator);
+  transition: background var(--transition-fast);
+}
+
+.item:last-child {
+  border-bottom: none;
+}
+
+.clickable {
+  cursor: pointer;
+}
+
+.clickable:hover {
+  background: var(--bg-tertiary);
+}
+
+.clickable:active {
+  background: var(--separator);
+}
+
+.left {
+  flex-shrink: 0;
+}
+
+.content {
+  flex: 1;
+  min-width: 0;
+}
+
+.right {
+  flex-shrink: 0;
+  color: var(--text-secondary);
+}
